@@ -21,6 +21,6 @@ def clock():
 
 # Start the time update function
 time_update()
-clock()
+
 window.mainloop()
 

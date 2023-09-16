@@ -3,7 +3,7 @@ from tkinter import Tk, Label
 
 def time_update():
     current_time = time.strftime("%H:%M:%S %p")  # Get the current time
-    label.config(text="Welcome time!")  # Update the label text
+    label.config(text=current_time)  # Update the label text
     label.after(1000, time_update)  # Update the time every 1000ms (1 second)
 
 window = Tk()
@@ -14,8 +14,13 @@ window.configure(bg="steelblue")
 label = Label(window, text="Welcome time!", font=("Arial Black", 60, "bold"), bg="steelblue")
 label.pack(pady=100)
 
+def clock():
+    current_time = time.strftime("%H:%M:%S %p")  # Get the current time
+    label.config(text=current_time)  # Update the label text
+    label.after(1000, clock)  # Update the time every 1000ms (1 second)
+
 # Start the time update function
 time_update()
-
+clock()
 window.mainloop()
 

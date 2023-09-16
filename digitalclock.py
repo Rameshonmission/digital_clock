@@ -10,8 +10,8 @@ window = Tk()
 window.title("Digital Clock")
 window.geometry("600x600")  # Corrected the geometry string
 
-window.configure(bg="steelblue")
-label = Label(window, text="Welcome time!", font=("Arial Black", 60, "bold"), bg="steelblue")
+window.configure(bg="darkgreen")
+label = Label(window, text="Welcome time!", font=("Arial Black", 60, "bold"), bg="darkgreen")
 label.pack(pady=100)
 
 def clock():
